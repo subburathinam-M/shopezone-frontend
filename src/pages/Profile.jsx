@@ -290,10 +290,11 @@ const Profile = () => {
 
     const [formErrors, setFormErrors] = useState({});
 
+// eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         fetchUserProfile();
     }, []);
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(() => {
         if (activeTab === 'addresses') {
             fetchAddresses();

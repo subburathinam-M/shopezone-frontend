@@ -16,7 +16,6 @@ import {
     FiStar,
     FiTrendingUp,
     FiClock,
-    FiDollarSign,
     FiAlertCircle,  // ✅ Add this
     FiRefreshCw     // ✅ Add this
 } from 'react-icons/fi';
