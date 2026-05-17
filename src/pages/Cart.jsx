@@ -37,13 +37,13 @@ const Cart = () => {
 
     const getImageUrl = (item) => {
         if (item.image)
-            return `https://api-gateway-production-3d22.up.railway.app${item.image}`;
+            return `${process.env.REACT_APP_IMAGE_URL}${item.image}`;
     
         if (item.imageUrls?.length > 0)
-            return `https://api-gateway-production-3d22.up.railway.app${item.imageUrls[0]}`;
+            return `${process.env.REACT_APP_IMAGE_URL}${item.imageUrls[0]}`;
     
         if (item.images?.length > 0)
-            return `https://api-gateway-production-3d22.up.railway.app${item.images[0].imageUrl}`;
+            return `${process.env.REACT_APP_IMAGE_URL}${item.images[0].imageUrl}`;
     
         return null;
     };

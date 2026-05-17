@@ -184,7 +184,7 @@ const ProductDetail = () => {
                                         initial={{ opacity: 0 }}
                                         animate={{ opacity: 1 }}
                                         transition={{ duration: 0.3 }}
-                                        src={`https://api-gateway-production-3d22.up.railway.app${images[selectedImage]}`}
+                                        src={`${process.env.REACT_APP_IMAGE_URL}${images[selectedImage]}`}
                                         alt={product.name}
                                         className="w-full h-full object-cover object-center"
                                     />
@@ -242,7 +242,7 @@ const ProductDetail = () => {
                                         }`}
                                     >
                                         <img
-                                            src={`https://api-gateway-production-3d22.up.railway.app${img}`}
+                                            src={`${process.env.REACT_APP_IMAGE_URL}${img}`}
                                             alt={`${product.name} ${index + 1}`}
                                             className="w-full h-full object-cover"
                                         />

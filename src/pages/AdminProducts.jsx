@@ -384,7 +384,7 @@ const AdminProducts = () => {
                                                     {product.images && product.images.length > 0 ? (
                                                         <div className="relative group">
                                                             <img 
-                                                                src={`https://api-gateway-production-3d22.up.railway.app${product.images[0].imageUrl}`}
+                                                                src={`${process.env.REACT_APP_IMAGE_URL}${product.images[0].imageUrl}`}
                                                                 alt={product.name}
                                                                 className="h-10 w-10 lg:h-12 lg:w-12 object-cover rounded-lg shadow-md group-hover:scale-110 transition-transform"
                                                                 onError={(e) => {
@@ -400,7 +400,7 @@ const AdminProducts = () => {
                                                         </div>
                                                     ) : product.imageUrls && product.imageUrls.length > 0 ? (
                                                         <img 
-                                                        src={`https://api-gateway-production-3d22.up.railway.app${product.imageUrls[0]}`}
+                                                        src={`${process.env.REACT_APP_IMAGE_URL}${product.imageUrls[0]}`}
                                                             alt={product.name}
                                                             className="h-10 w-10 lg:h-12 lg:w-12 object-cover rounded-lg shadow-md"
                                                             onError={(e) => {
@@ -511,7 +511,7 @@ const AdminProducts = () => {
                                             {product.images && product.images.length > 0 ? (
                                                 <div className="relative">
                                                     <img 
-                                                        src={`https://api-gateway-production-3d22.up.railway.app${product.images[0].imageUrl}`}
+                                                        src={`${process.env.REACT_APP_IMAGE_URL}${product.images[0].imageUrl}`}
                                                         alt={product.name}
                                                         className="h-16 w-16 sm:h-20 sm:w-20 object-cover rounded-lg shadow-md"
                                                         onError={(e) => {
@@ -625,7 +625,7 @@ const AdminProducts = () => {
                                         {selectedProduct.images.map((img, idx) => (
                                             <img
                                                 key={idx}
-                                                src={`https://api-gateway-production-3d22.up.railway.app${img.imageUrl}`}
+                                                src={`${process.env.REACT_APP_IMAGE_URL}${img.imageUrl}`}
                                                 alt={`${selectedProduct.name} ${idx + 1}`}
                                                 className="h-16 sm:h-20 w-full object-cover rounded-lg shadow-md"
                                             />
