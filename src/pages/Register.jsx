@@ -100,7 +100,7 @@ const Register = () => {
     
         setLoading(true);
         try {
-            // This calls Auth Service which creates user in Keycloak
+            // This calls Auth Service - creates user in DB with BCrypt password
             const result = await register(formData);
             
             console.log('Registration result:', result); // Debug log
@@ -165,7 +165,7 @@ const Register = () => {
                     
                     <h2 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">Registration Successful!</h2>
                     <p className="text-white/70 mb-6 sm:mb-8 text-sm sm:text-base">
-                        Your account has been created in Keycloak. You can now login with your credentials.
+                        Your account has been created successfully. You can now login with your credentials.
                     </p>
                     
                     <div className="w-full bg-white/10 h-2 rounded-full overflow-hidden">
