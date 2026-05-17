@@ -23,9 +23,9 @@ const ProductCard = ({ product, listMode = false }) => {
     // Get image URL
     const getImageUrl = () => {
         if (product.images && product.images.length > 0) {
-            return `https://api-gateway-production-3d22.up.railway.app${product.images[0].imageUrl}`;
+            return `${process.env.REACT_APP_IMAGE_URL}${product.images[0].imageUrl}`;
         } else if (product.imageUrls && product.imageUrls.length > 0) {
-            return `https://api-gateway-production-3d22.up.railway.app${product.imageUrls[0]}`;
+            return `${process.env.REACT_APP_IMAGE_URL}${product.imageUrls[0]}`;
         }
         return null;
     };

@@ -516,7 +516,7 @@ const EditProduct = ({ onProductUpdated }) => {
                                                     image.isPrimary ? 'ring-2 sm:ring-4 ring-yellow-400' : ''
                                                 }`}>
                                                     <img
-                                                        src={`https://api-gateway-production-3d22.up.railway.app${image.imageUrl}`}
+                                                        src={`${process.env.REACT_APP_IMAGE_URL}${image.imageUrl}`}
                                                         alt="Product"
                                                         className="h-24 sm:h-28 md:h-32 w-full object-cover"
                                                     />
