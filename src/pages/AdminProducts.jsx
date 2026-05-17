@@ -511,7 +511,7 @@ const AdminProducts = () => {
                                             {product.images && product.images.length > 0 ? (
                                                 <div className="relative">
                                                     <img 
-                                                        src={`https://api-gateway-production-3d22.up.railway.app${product.imageUrls[0]}`}
+                                                        src={`https://api-gateway-production-3d22.up.railway.app${product.images[0].imageUrl}`}
                                                         alt={product.name}
                                                         className="h-16 w-16 sm:h-20 sm:w-20 object-cover rounded-lg shadow-md"
                                                         onError={(e) => {
